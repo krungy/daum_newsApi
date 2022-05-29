@@ -1,21 +1,32 @@
 <template>
-  <h1>
-    {{ msg }}
-  </h1>
-  <Hello />
+  <div class="content_wrapper">
+    <Header />
+    <NewsSection />
+  </div>
 </template>
 
 <script>
-import Hello from '~/components/Hello'
+import Header from "~/components/Header";
+import NewsSection from "~/components/NewsSection";
 
 export default {
   components: {
-    Hello
+    Header,
+    NewsSection,
   },
   data() {
     return {
-      msg: 'Hello Vue!'
-    }
-  }
-}
+      msg: "Hello Vue!",
+    };
+  },
+};
 </script>
+
+<style lang="scss">
+.content_wrapper {
+  /* display: flex;
+    flex-direction: column; */
+  width: 1080px;
+  margin: 0 auto;
+}
+</style>
